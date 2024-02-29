@@ -1,4 +1,4 @@
-package com.marceloproject.webservicespring.Resources;
+package com.marceloproject.webservicespring.resources;
 
 import com.marceloproject.webservicespring.entities.User;
 
