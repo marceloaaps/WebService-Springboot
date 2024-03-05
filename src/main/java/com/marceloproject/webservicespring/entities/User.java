@@ -3,7 +3,12 @@ package com.marceloproject.webservicespring.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.sql.Array;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Objects;
+
+import static java.util.Collections.swap;
 
 @Entity
 @Table(name = "tb_user")
@@ -17,7 +22,8 @@ public class User implements Serializable {
     private String phone;
     private String password;
 
-    public User(){}
+    public User() {
+    }
 
     public User(Long id, String name, String email, String phone, String password) {
         this.id = id;
