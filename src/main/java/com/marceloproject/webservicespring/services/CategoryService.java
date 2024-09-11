@@ -12,7 +12,7 @@ import java.util.Optional;
 public class CategoryService {
 
     @Autowired
-    private CategoryService repository;
+    private CategoryRepository repository;
 
     public List<Category> findAll(){
 
@@ -20,7 +20,7 @@ public class CategoryService {
     }
 
     public Category findById(Long id){
-        Optional<Category> obj = Optional.ofNullable(repository.findById(id));
+        Optional<Category> obj = repository.findById(id);
         return obj.get();
     }
 }
