@@ -1,9 +1,11 @@
 package com.marceloproject.webservicespring.config;
 
 
+import com.marceloproject.webservicespring.entities.Category;
 import com.marceloproject.webservicespring.entities.Order;
 import com.marceloproject.webservicespring.entities.User;
 import com.marceloproject.webservicespring.entities.enums.OrderStatus;
+import com.marceloproject.webservicespring.repositories.CategoryRepository;
 import com.marceloproject.webservicespring.repositories.OrderRepository;
 import com.marceloproject.webservicespring.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +26,18 @@ public class TestConfig implements CommandLineRunner {
     @Autowired
     private OrderRepository orderRepository;
 
+    @Autowired
+    private CategoryRepository categoryRepository;
+
     @Override
     public void run(String... args){
+
+        Category c1 = new Category(null, "Eletronicos");
+        Category c2 = new Category(null, "Livros");
+        Category c3 = new Category(null, "Móveis");
+
+        categoryRepository.saveAll(Arrays.asList(c1, c2, c3));
+
         User u1 = new User(null, "Maria Joaquina", "maria@gmail.com", "988881111", "123456");
         User u2 = new User(null, "Alek Fumasa", "alex@gmail.com", "940028922", "123456");
 
@@ -35,5 +47,6 @@ public class TestConfig implements CommandLineRunner {
 
         userRepository.saveAll(Arrays.asList(u1, u2));
         orderRepository.saveAll(Arrays.asList(o1, o2, o3));
+
     }
 }
