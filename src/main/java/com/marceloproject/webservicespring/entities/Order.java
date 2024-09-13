@@ -22,7 +22,6 @@ public class Order implements Serializable {
 
     private Integer orderStatus;
 
-
     @ManyToOne
     @JoinColumn(name = "client_id")
     @JsonIgnore

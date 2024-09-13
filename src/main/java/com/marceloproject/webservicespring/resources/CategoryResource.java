@@ -30,5 +30,4 @@ public class CategoryResource {
         Category obj = service.findById(id);
         return ResponseEntity.ok().body(obj);
     }
-
 }
