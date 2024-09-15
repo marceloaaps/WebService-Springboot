@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(name = "/categories")
+@RequestMapping(value = "/categories")
 public class CategoryResource {
 
     @Autowired
