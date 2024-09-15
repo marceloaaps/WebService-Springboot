@@ -41,14 +41,20 @@ public class TestConfig implements CommandLineRunner {
         Category c2 = new Category(null, "Livros");
         Category c3 = new Category(null, "Móveis");
 
-
-        categoryRepository.saveAll(Arrays.asList(c1, c2, c3));
-
         Product p1 = new Product(null, "Torradeira Elétrica", "Uma descrição muito aleatória e legal", 250.00, "");
         Product p2 = new Product(null, "Sofá Cama", "Uma descrição muito aleatória e legal", 1220.00, "");
         Product p3 = new Product(null, "Game Of Thrones Vol. 1", "Uma descrição muito aleatória e legal", 90.00, "");
         Product p4 = new Product(null, "TV LG 58' 4K ", "Uma descrição muito aleatória e legal", 2250.00, "");
         Product p5 = new Product(null, "Armário do Mário", "Uma descrição muito aleatória e legal", 750.00, "");
+
+        categoryRepository.saveAll(Arrays.asList(c1, c2, c3));
+        productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
+
+        p1.getCategories().add(c1);
+        p2.getCategories().add(c3);
+        p3.getCategories().add(c2);
+        p4.getCategories().add(c1);
+        p5.getCategories().add(c3);
 
         productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 
