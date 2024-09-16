@@ -1,15 +1,10 @@
 package com.marceloproject.webservicespring.config;
 
 
-import com.marceloproject.webservicespring.entities.Category;
-import com.marceloproject.webservicespring.entities.Order;
-import com.marceloproject.webservicespring.entities.Product;
-import com.marceloproject.webservicespring.entities.User;
+import com.marceloproject.webservicespring.entities.*;
 import com.marceloproject.webservicespring.entities.enums.OrderStatus;
-import com.marceloproject.webservicespring.repositories.CategoryRepository;
-import com.marceloproject.webservicespring.repositories.OrderRepository;
-import com.marceloproject.webservicespring.repositories.ProductRepository;
-import com.marceloproject.webservicespring.repositories.UserRepository;
+import com.marceloproject.webservicespring.repositories.*;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -33,6 +28,9 @@ public class TestConfig implements CommandLineRunner {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private OrderItemRepository orderItemRepository;
 
     @Override
     public void run(String... args){
@@ -68,5 +66,11 @@ public class TestConfig implements CommandLineRunner {
         userRepository.saveAll(Arrays.asList(u1, u2));
         orderRepository.saveAll(Arrays.asList(o1, o2, o3));
 
+        OrderItem oi1 = new OrderItem(o1, p1, 4, p1.getPrice());
+        OrderItem oi2 = new OrderItem(o3, p4, 6, p4.getPrice());
+        OrderItem oi3 = new OrderItem(o2, p2, 4, p2.getPrice());
+        OrderItem oi4 = new OrderItem(o1, p3, 7, p3.getPrice());
+
+        orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
     }
 }
