@@ -72,5 +72,10 @@ public class TestConfig implements CommandLineRunner {
         OrderItem oi4 = new OrderItem(o1, p3, 7, p3.getPrice());
 
         orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
+
+        Payment pay1 = new Payment(null, Instant.parse("2024-08-21T19:52:01Z"), o1);
+        o1.setPayment(pay1);
+
+        orderRepository.save(o1);
     }
 }

@@ -24,6 +24,9 @@ public class Order implements Serializable {
 
     private Integer orderStatus;
 
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    private Payment payment;
+
     @ManyToOne
     @JoinColumn(name = "client_id")
     @JsonIgnore
@@ -76,9 +79,18 @@ public class Order implements Serializable {
         this.client = client;
     }
 
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
     public Set<OrderItem> getItems() {
         return items;
     }
+
 
     @Override
     public boolean equals(Object o) {
