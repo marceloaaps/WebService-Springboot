@@ -1,6 +1,7 @@
 package com.marceloproject.webservicespring.services;
 
 import com.marceloproject.webservicespring.entities.Order;
+import com.marceloproject.webservicespring.entities.User;
 import com.marceloproject.webservicespring.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +24,4 @@ public class OrderService {
         Optional<Order> obj = repository.findById(id);
         return obj.get();
     }
-
-
 }
