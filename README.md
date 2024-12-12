@@ -1,5 +1,5 @@
 
-# <img width="25px" src="https://static-00.iconduck.com/assets.00/spring-icon-256x256-2efvkvky.png" /> Algoritmos de Ordenação <img width="25px" src="https://cdn-icons-png.flaticon.com/512/226/226777.png" />
+# <img width="25px" src="https://static-00.iconduck.com/assets.00/spring-icon-256x256-2efvkvky.png" /> Sistema de Loja com Web Service API <img width="25px" src="https://cdn-icons-png.flaticon.com/512/226/226777.png" />
 Projeto feito na intenção de criar um Web Service API como Sistema de Loja com diversas funcionalidades e CRUD completo, com comunicação externa sendo feita dessa aplicação com a utilização de multiplos endpoints, utilizando banco de dados em memória.
 
 
