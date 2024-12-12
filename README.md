@@ -16,14 +16,14 @@ Projeto feito na intenção de criar um Web Service API como Sistema de Loja com
 ## Screenshot <img src="https://cdn-icons-png.flaticon.com/512/883/883746.png" width="20px" />
 <p>Documentação no Swagger </p>
 <img width="700" src="https://i.imgur.com/6bl5vGq.png">
-<p>Requisição no endpoint Users </p>
+<p>Requisição no Endpoint Users </p>
 <img width="700" src="https://i.imgur.com/cySwBtA.png">
 
 
 ## Aprendizados <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" width="20px"/>
 
 Esse projeto conta com diversos aprendizados, alguns sendo reforçados e outros criados:
-  - Soringboot
+  - Springboot
   - JPA
   - Maven
   - Swagger
