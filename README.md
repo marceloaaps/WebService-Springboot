@@ -10,7 +10,6 @@ Projeto feito na intenção de criar um Web Service API como Sistema de Loja com
 - Maven
 - Swagger
 - H2 Database
-- Layered Architecture
 
 
 ## Screenshot <img src="https://cdn-icons-png.flaticon.com/512/883/883746.png" width="20px" />
@@ -29,3 +28,4 @@ Esse projeto conta com diversos aprendizados, alguns sendo reforçados e outros 
   - Swagger
   - H2 Datanase
   - API REST
+  - Layered Architecture
