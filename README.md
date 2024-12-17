@@ -26,6 +26,6 @@ Esse projeto conta com diversos aprendizados, alguns sendo reforçados e outros 
   - JPA
   - Maven
   - Swagger
-  - H2 Datanase
+  - H2 Database
   - API REST
   - Layered Architecture
